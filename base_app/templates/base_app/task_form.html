@@ -1,5 +1,5 @@
 <h2>Let's create a new task</h2>
-
+<a href=" {% url 'tasks' %} ">Back</a>
 <form action="" method="POST">
   {% csrf_token %} {{form.as_p}}
   <input type="submit" value="Submit" />
