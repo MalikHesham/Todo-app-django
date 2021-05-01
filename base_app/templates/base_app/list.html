@@ -1,0 +1,15 @@
+<h2>Welcome to My To do list app!</h2>
+<table>
+  <tr>
+    <th>Item</th>
+    <th></th>
+  </tr>
+  {% for task in tasks %}
+  <tr>
+    <td>{{task.title}}</td>
+    <td><a href=" {% url 'task' task.id %} ">View</a></td>
+  </tr>
+  {%empty%}
+  <h3>No items were found</h3>
+  {% endfor %}
+</table>
