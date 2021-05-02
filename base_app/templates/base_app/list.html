@@ -5,6 +5,12 @@
 {% endif %}
 <h2>Welcome Back, {{request.user}}!</h2>
 <a href=" {% url 'task-create' %} ">Add a New Task</a>
+
+<form method="GET">
+  <input type="text" name="search-text" value="{{search_input}}" />
+  <input type="submit" value="Search" />
+</form>
+
 <table>
   <tr>
     <th>Item</th>
